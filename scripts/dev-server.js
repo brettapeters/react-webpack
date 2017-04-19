@@ -8,10 +8,6 @@ const getConfig = require('../webpack.config');
 const serve = (webpackDevHost = 'localhost', webpackDevPort = 8080) => {
   const config = getConfig(webpackDevPort);
   const compiler = webpack(config);
-  compiler.plugin('done', stats => {
-    let elapsed = ((stats.endTime - stats.startTime) / 1000).toFixed(2);
-    console.log(`Webpack build finished in ${elapsed} seconds`.cyan);
-  });
 
   const webpackDevServer = new WebpackDevServer(
     compiler,
