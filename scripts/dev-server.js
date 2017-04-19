@@ -16,11 +16,21 @@ const serve = (webpackDevHost = 'localhost', webpackDevPort = 8080) => {
   const webpackDevServer = new WebpackDevServer(
     compiler,
     {
-      noInfo: true,
       hot: true,
       historyApiFallback: true,
       publicPath: config.output.publicPath,
-      contentBase: config.output.path
+      contentBase: config.output.path,
+      quiet: false,
+      noInfo: false,
+      stats: {
+        colors: true,
+        assets: true,
+        version: false,
+        hash: false,
+        timings: false,
+        chunks: false,
+        chunkModules: true
+      }
     }
   );
 

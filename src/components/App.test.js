@@ -1,12 +1,22 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
 import { expect } from 'chai';
+import { shallow } from 'enzyme';
 
 import App from './App.jsx';
 
+function setup() {
+	const props = {};
+	return shallow(<App {...props} />);
+}
+
 describe('App', function() {
-  it('should have a heading', function() {
-    const wrapper = shallow(<App />);
-    expect(wrapper.find('h2')).to.have.length(2);
-  });
+	it('renders .container-fluid', function() {
+		const wrapper = setup();
+		expect(wrapper.find('div').hasClass('container-fluid')).to.be.true;
+	});
+
+	it('has a paragraph', function() {
+		const wrapper = setup();
+		expect(wrapper.find('p').length).to.equal(1);
+	});
 });

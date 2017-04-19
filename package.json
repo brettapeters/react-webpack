@@ -9,7 +9,7 @@
     "dev-server": "babel-node --plugins transform-es2015-modules-commonjs scripts/dev-server.js",
     "lint": "esw --ext .js,.jsx webpack.*.js src scripts",
     "lint:watch": "npm run lint -- --watch",
-    "test": "mocha --compilers jsx:babel-register --reporter dot scripts/test-setup.js \"src/**/*.test.js\"",
+    "test": "mocha --compilers jsx:babel-register --reporter spec scripts/test-setup.js \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch",
     "prebuild": "rimraf dist/",
     "build": "webpack -p"
@@ -50,6 +50,8 @@
   "dependencies": {
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1"
   }
 }

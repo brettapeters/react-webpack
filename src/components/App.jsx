@@ -1,17 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class App extends React.Component{
+import Routes from './Routes.jsx';
+
+class App extends React.Component{
 	constructor() {
 		super();
 	}
 
 	render() {
 		return (
-			<div>
-				<h1>Hello World!</h1>
-				<h2>cool</h2>
-				<h2>super cool</h2>
+			<div className="container-fluid">
+				<p>Header here...</p>
+				<Routes />
 			</div>
 		);
 	}
 }
+
+App.propTypes = {
+	// children: PropTypes.object.isRequired
+};
+
+export default App;

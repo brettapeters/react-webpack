@@ -9,7 +9,7 @@ require('./main.scss');
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>
-      <Component/>
+      <Component />
     </AppContainer>,
     document.getElementById('root')
   );
