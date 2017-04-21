@@ -14,9 +14,4 @@ describe('App', function() {
 		const wrapper = setup();
 		expect(wrapper.find('div').hasClass('container-fluid')).to.be.true;
 	});
-
-	it('has a paragraph', function() {
-		const wrapper = setup();
-		expect(wrapper.find('p').length).to.equal(1);
-	});
 });

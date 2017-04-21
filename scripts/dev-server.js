@@ -3,7 +3,7 @@ import colors from 'colors';
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 
-const getConfig = require('../webpack.config');
+const getConfig = require('../webpack.dev.config');
 
 const serve = (webpackDevHost = 'localhost', webpackDevPort = 8080) => {
   const config = getConfig(webpackDevPort);

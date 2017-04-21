@@ -1,5 +1,21 @@
-$default-header: tomato;
+$dark_gray: #4d4d4d;
+$active: orange;
 
-h1 {
-	color: $default-header;
+#root {
+	font-size: 14px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: $dark_gray;
+	min-width: 550px;
+	max-width: 850px;
+	margin: 0 auto;
+}
+
+a {
+	&.active {
+		color: $active;
+	}
+}
+
+nav {
+	padding-top: 20px;
 }
