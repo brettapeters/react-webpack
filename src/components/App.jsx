@@ -1,27 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-import Routes from './Routes.jsx';
+import routes from '../routes/routes';
 import Header from './common/Header.jsx';
 
 class App extends React.Component{
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 	}
 
 	render() {
 		return (
-			<div className="container-fluid">
-				<Routes>
+			<Router>
+				<div className="container-fluid">
 					<Header />
-				</Routes>
-			</div>
+					{routes}
+				</div>
+			</Router>
 		);
 	}
 }
 
 App.propTypes = {
-	// children: PropTypes.object.isRequired
 };
 
 export default App;

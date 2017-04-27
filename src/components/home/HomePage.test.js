@@ -22,8 +22,9 @@ describe('HomePage', function() {
 		expect(wrapper.find('p').length).to.equal(1);
 	});
 
-	it('Has a link to "about"', function() {
+	it('has a link to "about"', function() {
 		const wrapper = setup();
 		expect(wrapper.find(Link).props().to).to.equal('about');
 	});
 });
+
