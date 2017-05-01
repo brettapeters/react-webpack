@@ -2,10 +2,12 @@ import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 
-import CoursesPage from './CoursesPage.jsx';
+import { CoursesPage } from './CoursesPage.jsx';
 
 function setup() {
-	const props = {};
+	const props = {
+		courses: []
+	};
 	return shallow(<CoursesPage {...props} />);
 }
 
