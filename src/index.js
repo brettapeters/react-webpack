@@ -10,11 +10,14 @@ import { ConnectedRouter } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 
 import App from './components/App.jsx';
+import { loadCourses } from './actions/course-actions';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './main.scss';
 
 const store = configureStore();
+store.dispatch(loadCourses());
+
 const history = createHistory();
 
 const render = (Component) => {
